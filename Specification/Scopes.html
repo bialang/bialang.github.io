@@ -201,6 +201,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Introduction/Cheatsheet.html" title="Cheatsheet" class="md-nav__link">
+      Cheatsheet
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -347,18 +359,6 @@
   <li class="md-nav__item">
     <a href="../Syntax/Comments.html" title="Comments" class="md-nav__link">
       Comments
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../Syntax/Syntax.html" title="Syntax" class="md-nav__link">
-      Syntax
     </a>
   </li>
 
@@ -520,31 +520,22 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#local-scope" class="md-nav__link">
-    Local Scope
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#variable-capturring" class="md-nav__link">
-    Variable Capturring
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#chained-scopes" class="md-nav__link">
-    Chained Scopes
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
     
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="Variables.html" title="Variables" class="md-nav__link">
+      Variables
+    </a>
   </li>
 
         
@@ -585,27 +576,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#local-scope" class="md-nav__link">
-    Local Scope
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#variable-capturring" class="md-nav__link">
-    Variable Capturring
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#chained-scopes" class="md-nav__link">
-    Chained Scopes
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -625,26 +595,6 @@
                 <h1 id="scopes">Scopes</h1>
 <h2 id="global-scope">Global Scope</h2>
 <p>In the global scope all variables are stored with their names in a dictionary. This dictionary is accessible from everywhere in the code.</p>
-<h2 id="local-scope">Local Scope</h2>
-<p>Local scopes are defined at function level and opened/closed with <code>{</code> and <code>}</code> respectively.</p>
-<div class="codehilite"><pre><span></span><code><span class="n">let</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span> <span class="o">#</span> <span class="k">global</span>
-
-<span class="k">if</span> <span class="k">true</span> <span class="err">{</span> <span class="o">#</span> <span class="k">not</span> <span class="n">a</span> <span class="k">scope</span>
-    <span class="n">let</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">0</span> <span class="o">#</span> <span class="n">still</span> <span class="k">global</span>
-<span class="err">}</span>
-
-<span class="n">func</span> <span class="n">foo</span><span class="p">()</span> <span class="err">{</span> <span class="o">#</span> <span class="k">local</span> <span class="k">scope</span> <span class="k">at</span> <span class="k">function</span> <span class="k">level</span>
-    <span class="n">let</span> <span class="n">l</span> <span class="o">=</span> <span class="mi">0</span>
-
-    <span class="k">return</span> <span class="n">func</span><span class="p">()</span> <span class="err">{</span> <span class="o">#</span> <span class="n">another</span> <span class="k">local</span> <span class="k">scope</span><span class="p">,</span> <span class="n">can</span> <span class="n">see</span> <span class="k">all</span> <span class="k">scope</span> <span class="n">above</span> <span class="n">but</span> <span class="k">not</span> <span class="n">the</span> <span class="n">other</span> <span class="n">way</span> <span class="n">around</span>
-        <span class="k">return</span> <span class="n">l</span>
-    <span class="err">}</span>
-<span class="err">}</span>
-</code></pre></div>
-
-
-<h2 id="variable-capturring">Variable Capturring</h2>
-<h2 id="chained-scopes">Chained Scopes</h2>
                 
               
               
@@ -677,6 +627,20 @@
             </div>
           </a>
         
+        
+          <a href="Variables.html" title="Variables" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Variables
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
         
       </nav>
     </div>

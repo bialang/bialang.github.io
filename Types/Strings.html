@@ -201,6 +201,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Introduction/Cheatsheet.html" title="Cheatsheet" class="md-nav__link">
+      Cheatsheet
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -287,70 +299,42 @@
       
         <li class="md-nav__item">
   <a href="#comparing-strings" class="md-nav__link">
-    Comparing strings
+    Comparing Strings
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#iterating-over-strings" class="md-nav__link">
-    Iterating over strings
+    Iterating over Strings
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#normal-strings" class="md-nav__link">
-    Normal strings
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#raw-strings" class="md-nav__link">
-    Raw strings
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#template-strings" class="md-nav__link">
-    Template strings
+    Normal Strings
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#escape-characters" class="md-nav__link">
-    Escape characters
+    Escape Characters
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#guaranteed-supported-encodings" class="md-nav__link">
-    Guaranteed supported encodings
+    Guaranteed supported Encodings
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#supported-underlying-libraries" class="md-nav__link">
-    Supported underlying libraries
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#internal-implementation" class="md-nav__link">
-    Internal implementation
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#limitations" class="md-nav__link">
-    Limitations
+  <a href="#internal-storage" class="md-nav__link">
+    Internal Storage
   </a>
   
 </li>
@@ -454,18 +438,6 @@
   <li class="md-nav__item">
     <a href="../Syntax/Comments.html" title="Comments" class="md-nav__link">
       Comments
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../Syntax/Syntax.html" title="Syntax" class="md-nav__link">
-      Syntax
     </a>
   </li>
 
@@ -590,6 +562,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Specification/Variables.html" title="Variables" class="md-nav__link">
+      Variables
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -622,70 +606,42 @@
       
         <li class="md-nav__item">
   <a href="#comparing-strings" class="md-nav__link">
-    Comparing strings
+    Comparing Strings
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#iterating-over-strings" class="md-nav__link">
-    Iterating over strings
+    Iterating over Strings
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#normal-strings" class="md-nav__link">
-    Normal strings
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#raw-strings" class="md-nav__link">
-    Raw strings
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#template-strings" class="md-nav__link">
-    Template strings
+    Normal Strings
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#escape-characters" class="md-nav__link">
-    Escape characters
+    Escape Characters
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#guaranteed-supported-encodings" class="md-nav__link">
-    Guaranteed supported encodings
+    Guaranteed supported Encodings
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#supported-underlying-libraries" class="md-nav__link">
-    Supported underlying libraries
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#internal-implementation" class="md-nav__link">
-    Internal implementation
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#limitations" class="md-nav__link">
-    Limitations
+  <a href="#internal-storage" class="md-nav__link">
+    Internal Storage
   </a>
   
 </li>
@@ -707,9 +663,17 @@
                 
                 
                 <h1 id="string">String</h1>
-<h2 id="comparing-strings">Comparing strings</h2>
+<h2 id="comparing-strings">Comparing Strings</h2>
 <p>Strings can be compared with the <code>==</code> or <code>!=</code> operators or with <code>equals</code> or <code>iequals</code> for case-insensitive comparing. Additionally <code>compare</code> or <code>icompare</code> return an integer value describing the comparison.</p>
-<h2 id="iterating-over-strings">Iterating over strings</h2>
+<div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">io</span>
+
+<span class="n">io</span><span class="o">.</span><span class="k">print</span><span class="p">(</span><span class="s2">&quot;bia&quot;</span> <span class="o">==</span> <span class="s2">&quot;Bia&quot;</span><span class="p">)</span> <span class="o">//</span> <span class="mi">0</span>
+<span class="n">io</span><span class="o">.</span><span class="k">print</span><span class="p">(</span><span class="s2">&quot;bia&quot;</span> <span class="o">!=</span> <span class="s2">&quot;Bia&quot;</span><span class="p">)</span> <span class="o">//</span> <span class="mi">1</span>
+<span class="n">io</span><span class="o">.</span><span class="k">print</span><span class="p">(</span><span class="s2">&quot;Bia&quot;</span> <span class="ow">in</span> <span class="s2">&quot;I like Bia&quot;</span><span class="p">)</span> <span class="o">//</span> <span class="mi">1</span>
+</code></pre></div>
+
+
+<h2 id="iterating-over-strings">Iterating over Strings</h2>
 <p>When accessing characters at a specific position keep in mind that the code unit is returned and not the actual code point. When the string consists of only BMP characters all code units are also code points (see UTF-16 encoding).</p>
 <div class="codehilite"><pre><span></span><code><span class="n">let</span> <span class="n">string</span> <span class="o">=</span> <span class="ss">&quot;aが&quot;</span>
 
@@ -738,21 +702,9 @@
 </code></pre></div>
 
 
-<h2 id="normal-strings">Normal strings</h2>
+<h2 id="normal-strings">Normal Strings</h2>
 <p>'Normal' strings are enclosed in either two <code>"</code> (double quotes) or <code>'</code> (single quotes). Normal strings can expand over multiple lines.</p>
-<h2 id="raw-strings">Raw strings</h2>
-<p>Raw strings cannot contain escape characters and can expand over mutliple lines.</p>
-<h2 id="template-strings">Template strings</h2>
-<p>Template strings are enclosed between two ` (grave accents). Inside these strings normal Bia expression can be evaluated inside <code>${}</code> and put inplace like following:</p>
-<div class="codehilite"><pre><span></span><code>let x = 1
-let z = 9
-
-// prints y = x + z = 10
-print(`y = x + z = <span class="cp">${</span><span class="n">x</span><span class="o">+</span><span class="n">z</span><span class="cp">}</span>`)
-</code></pre></div>
-
-
-<h2 id="escape-characters">Escape characters</h2>
+<h2 id="escape-characters">Escape Characters</h2>
 <p>The following escape sequences are valid if the string is not a <a href="#raw-strings">raw string</a>.</p>
 <table>
 <thead>
@@ -820,7 +772,7 @@ print(`y = x + z = <span class="cp">${</span><span class="n">x</span><span class
 </tr>
 </tbody>
 </table>
-<h2 id="guaranteed-supported-encodings">Guaranteed supported encodings</h2>
+<h2 id="guaranteed-supported-encodings">Guaranteed supported Encodings</h2>
 <p>Depending on the underlying encoding implementation different encodings are supported.</p>
 <p>Always supported:</p>
 <ul>
@@ -829,15 +781,8 @@ print(`y = x + z = <span class="cp">${</span><span class="n">x</span><span class
 <li>UTF-16LE and UTF-16BE</li>
 <li>UTF-32LE and UTF-32BE</li>
 </ul>
-<h2 id="supported-underlying-libraries">Supported underlying libraries</h2>
-<ul>
-<li><a href="#">ICU</a> <em>default</em></li>
-</ul>
-<p>If no library is provided only the guaranteed encodings <a href="#guaranteed-supported-encodings">here</a> are supported.</p>
-<h2 id="internal-implementation">Internal implementation</h2>
-<p>Bia strings are stored as UTF-16 internally with the default CPU endianess. By defaut static strings are interned.</p>
-<h2 id="limitations">Limitations</h2>
-<p>The maximum allowed string length cannot exceed 2^64-1 which is equal to <code>18 446 744 073 709 551 615</code>.</p>
+<h2 id="internal-storage">Internal Storage</h2>
+<p>Bia strings are stored as UTF-8 internally.</p>
                 
               
               

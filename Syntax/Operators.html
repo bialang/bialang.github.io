@@ -201,6 +201,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Introduction/Cheatsheet.html" title="Cheatsheet" class="md-nav__link">
+      Cheatsheet
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -357,18 +369,6 @@
           
           
 
-
-  <li class="md-nav__item">
-    <a href="Syntax.html" title="Syntax" class="md-nav__link">
-      Syntax
-    </a>
-  </li>
-
-        
-          
-          
-          
-
   
 
 
@@ -406,8 +406,35 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#operator-precedence" class="md-nav__link">
-    Operator Precedence
+  <a href="#special-behavior-of-the-logical-operators" class="md-nav__link">
+    Special Behavior of the Logical Operators
+  </a>
+  
+    <nav class="md-nav" aria-label="Special Behavior of the Logical Operators">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#logical-and" class="md-nav__link">
+    Logical And
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logical-or" class="md-nav__link">
+    Logical Or
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#precedence" class="md-nav__link">
+    Precedence
   </a>
   
 </li>
@@ -527,6 +554,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Specification/Variables.html" title="Variables" class="md-nav__link">
+      Variables
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -558,8 +597,35 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#operator-precedence" class="md-nav__link">
-    Operator Precedence
+  <a href="#special-behavior-of-the-logical-operators" class="md-nav__link">
+    Special Behavior of the Logical Operators
+  </a>
+  
+    <nav class="md-nav" aria-label="Special Behavior of the Logical Operators">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#logical-and" class="md-nav__link">
+    Logical And
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logical-or" class="md-nav__link">
+    Logical Or
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#precedence" class="md-nav__link">
+    Precedence
   </a>
   
 </li>
@@ -581,60 +647,101 @@
                 
                 
                 <h1 id="operators">Operators</h1>
-<h2 id="operator-precedence">Operator Precedence</h2>
+<h2 id="special-behavior-of-the-logical-operators">Special Behavior of the Logical Operators</h2>
+<h3 id="logical-and">Logical And</h3>
+<p>If the left-hand side can be converted to <code>true</code>, the right-hand side is returned; otherwise the left-hand side is returned:</p>
+<div class="codehilite"><pre><span></span><code><span class="err">io.print(99 and 61) // 61</span>
+<span class="err">io.print(0 and 61) // 0</span>
+</code></pre></div>
+
+
+<h3 id="logical-or">Logical Or</h3>
+<p>If the left-hand side can be converted to <code>true</code>, it is returned; otherwise the right-hand side is returned:</p>
+<div class="codehilite"><pre><span></span><code><span class="err">io.print(99 or 61) // 99</span>
+<span class="err">io.print(0 or 61) // 61</span>
+</code></pre></div>
+
+
+<h2 id="precedence">Precedence</h2>
+<p>The following table shows Bia's operator precedence from highest to lowest.</p>
 <table>
 <thead>
 <tr>
-<th align="center">Precedence</th>
 <th>Operator</th>
 <th>Description</th>
+<th>Associativity</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="center">1</td>
-<td>()</td>
-<td>Parentheses</td>
+<td><code>a.b</code>,<code>a()</code>,<code>a[]</code></td>
+<td>member access, function call, subscript</td>
+<td>left-to-right</td>
 </tr>
 <tr>
-<td align="center">2</td>
-<td>foo()<br/></td>
-<td>Function call</td>
-</tr>
-<tr>
-<td align="center"></td>
-<td>.</td>
-<td>Member access</td>
-</tr>
-<tr>
-<td align="center"></td>
 <td><code>**</code></td>
-<td>Exponentiation</td>
+<td>exponentiation</td>
+<td></td>
 </tr>
 <tr>
-<td align="center"></td>
-<td><code>*</code>, <code>/</code>, <code>//</code>, <code>%</code></td>
-<td>Multiplication, division and remainder</td>
+<td><code>-a</code>, <code>~a</code></td>
+<td>unary minus, bitwise not</td>
+<td>right-to-left</td>
 </tr>
 <tr>
-<td align="center"></td>
+<td><code>*</code>, <code>/</code>, <code>%</code></td>
+<td>multiplication, division and remainder</td>
+<td>left-to-right</td>
+</tr>
+<tr>
 <td><code>+</code>, <code>-</code></td>
-<td>Addition and subtraction</td>
+<td>addition and subtraction</td>
+<td></td>
 </tr>
 <tr>
-<td align="center"></td>
-<td><code>not</code> <em>value</em></td>
-<td>Boolean negation</td>
+<td><code>&lt;&lt;</code>, <code>&gt;&gt;</code></td>
+<td>bitwise shifts</td>
+<td></td>
 </tr>
 <tr>
-<td align="center"></td>
+<td><code>&amp;</code></td>
+<td>bitwise and</td>
+<td></td>
+</tr>
+<tr>
+<td><code>^</code></td>
+<td>bitwise xor</td>
+<td></td>
+</tr>
+<tr>
+<td><code>|</code></td>
+<td>bitwise or</td>
+<td></td>
+</tr>
+<tr>
+<td><code>&lt;=&gt;</code></td>
+<td>three-way comparison</td>
+<td></td>
+</tr>
+<tr>
+<td><code>in</code>, <code>&lt;</code>, <code>&gt;</code>, <code>&lt;=</code>, <code>&gt;=</code>, <code>!=</code>, <code>==</code></td>
+<td>including test and comparisons</td>
+<td></td>
+</tr>
+<tr>
+<td><code>not</code></td>
+<td>logical not</td>
+<td>right-to-left</td>
+</tr>
+<tr>
 <td><code>and</code></td>
-<td>Boolean conjunction</td>
+<td>logical and</td>
+<td></td>
 </tr>
 <tr>
-<td align="center"></td>
 <td><code>or</code></td>
-<td>Boolean disjunction</td>
+<td>logical or</td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -656,7 +763,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="Syntax.html" title="Syntax" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="Comments.html" title="Comments" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -665,7 +772,7 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Syntax
+                Comments
               </div>
             </div>
           </a>

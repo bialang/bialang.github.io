@@ -201,6 +201,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Introduction/Cheatsheet.html" title="Cheatsheet" class="md-nav__link">
+      Cheatsheet
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -276,13 +288,6 @@
         <li class="md-nav__item">
   <a href="#integers" class="md-nav__link">
     Integers
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#floating-points" class="md-nav__link">
-    Floating points
   </a>
   
 </li>
@@ -415,18 +420,6 @@
 
 
   <li class="md-nav__item">
-    <a href="../Syntax/Syntax.html" title="Syntax" class="md-nav__link">
-      Syntax
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
     <a href="../Syntax/Operators.html" title="Operators" class="md-nav__link">
       Operators
     </a>
@@ -541,6 +534,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Specification/Variables.html" title="Variables" class="md-nav__link">
+      Variables
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -579,13 +584,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#floating-points" class="md-nav__link">
-    Floating points
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#integer-literals" class="md-nav__link">
     Integer literals
   </a>
@@ -610,30 +608,32 @@
                 
                 <h1 id="numbers">Numbers</h1>
 <h2 id="integers">Integers</h2>
-<p>Integers can be of arbitrary length if Bia was built with a supported big int library, otherwise the integers range from <code>-2^63</code> to <code>2^63-1</code>.</p>
-<h2 id="floating-points">Floating points</h2>
-<p>Floating point values are stored in a IEEE 754 double precision encoding. The internal encoding is platform specific.</p>
+<p>Integers in Bia range from <code>-2^63</code> to <code>2^63-1</code>.</p>
 <h2 id="integer-literals">Integer literals</h2>
 <p>The following literals can percede an integer digit and change the base of the number. If no literal is given, the decimal base is assumed.</p>
 <table>
 <thead>
 <tr>
-<th>Literal</th>
 <th>Base</th>
+<th>Literal</th>
+<th>Example</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>0x <em>or</em> 0X</td>
 <td>Hexadecimal</td>
+<td><code>0x</code> <em>or</em> <code>0X</code></td>
+<td><code>0xc0ffee</code></td>
 </tr>
 <tr>
-<td>0b <em>or</em> 0B</td>
 <td>Binary</td>
+<td><code>0b</code> <em>or</em> <code>0B</code></td>
+<td><code>0b00100101</code></td>
 </tr>
 <tr>
-<td>0</td>
 <td>Ocatal</td>
+<td><code>0</code></td>
+<td><code>0777</code></td>
 </tr>
 </tbody>
 </table>
@@ -655,7 +655,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../Introduction/Embedding.html" title="Embedding" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../Introduction/Cheatsheet.html" title="Cheatsheet" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -664,7 +664,7 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Embedding
+                Cheatsheet
               </div>
             </div>
           </a>

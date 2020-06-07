@@ -201,6 +201,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Introduction/Cheatsheet.html" title="Cheatsheet" class="md-nav__link">
+      Cheatsheet
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -368,18 +380,6 @@
 
 
   <li class="md-nav__item">
-    <a href="../Syntax/Syntax.html" title="Syntax" class="md-nav__link">
-      Syntax
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
     <a href="../Syntax/Operators.html" title="Operators" class="md-nav__link">
       Operators
     </a>
@@ -494,6 +494,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Specification/Variables.html" title="Variables" class="md-nav__link">
+      Variables
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -533,27 +545,29 @@
                 <h1 id="hello-world">Hello, World</h1>
 <p>This examples demonstrates how to bind a simple C++ function to an engine and then executing a small script.</p>
 <div class="codehilite"><pre><span></span><code><span class="cp">#include</span> <span class="cpf">&lt;bia/bia.hpp&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;bia/bsl/io.hpp&gt;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
-
-<span class="kr">inline</span> <span class="kt">void</span> <span class="nf">hello_world</span><span class="p">()</span>
-<span class="p">{</span>
-    <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Hello, World! - C++</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
-<span class="p">}</span>
+<span class="cp">#include</span> <span class="cpf">&lt;sstream&gt;</span><span class="cp"></span>
 
 <span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
 <span class="p">{</span>
-    <span class="n">bia</span><span class="o">::</span><span class="n">engine</span> <span class="n">eng</span><span class="p">;</span>
+  <span class="n">bia</span><span class="o">::</span><span class="n">engine</span> <span class="n">engine</span><span class="p">;</span>
 
-    <span class="n">eng</span><span class="p">.</span><span class="n">fun</span><span class="p">(</span><span class="s">&quot;hello_world&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">hello_world</span><span class="p">);</span>
+  <span class="n">engine</span><span class="p">.</span><span class="n">function</span><span class="p">(</span><span class="s">&quot;hello_world&quot;</span><span class="p">,</span> <span class="o">+</span><span class="p">[]</span> <span class="p">{</span> <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Hello, World! - C++</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span> <span class="p">});</span>
+  <span class="n">engine</span><span class="p">.</span><span class="k">module</span><span class="o">&lt;</span><span class="n">bia</span><span class="o">::</span><span class="n">bsl</span><span class="o">::</span><span class="n">io</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;io&quot;</span><span class="p">,</span> <span class="n">engine</span><span class="p">.</span><span class="n">gc</span><span class="p">());</span>
 
-    <span class="n">eng</span><span class="p">.</span><span class="n">execute</span><span class="p">(</span><span class="sa">R</span><span class="s">&quot;</span><span class="dl">(</span><span class="s"></span>
-<span class="s">        import io</span>
+  <span class="n">std</span><span class="o">::</span><span class="n">stringstream</span> <span class="n">code</span><span class="p">;</span>
 
-<span class="s">        let name = &quot;Bia&quot;</span>
+  <span class="n">code</span> <span class="o">&lt;&lt;</span> <span class="n">u8R</span><span class="s">&quot;(</span>
+    <span class="c1">// prints &#39;Hello, World&#39; to the console</span>
+    <span class="k">import</span> <span class="n">io</span>
+    <span class="n">io</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;Hello, World! - Bia&quot;</span><span class="p">)</span>
 
-<span class="s">        io.print(f&quot;Hello, World! - {name}&quot;)</span>
-<span class="s">        hello_world()</span>
-<span class="s">    </span><span class="dl">)</span><span class="s">&quot;</span><span class="p">);</span>
+    <span class="c1">// calls the C++ function and print &#39;Hello, World - C++&#39; to the console</span>
+    <span class="n">hello_world</span><span class="p">()</span>
+  <span class="p">)</span><span class="s">&quot;;</span>
+
+  <span class="n">engine</span><span class="p">.</span><span class="n">execute</span><span class="p">(</span><span class="n">code</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div>
                 

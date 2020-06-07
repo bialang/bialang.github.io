@@ -263,6 +263,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="Introduction/Cheatsheet.html" title="Cheatsheet" class="md-nav__link">
+      Cheatsheet
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -419,18 +431,6 @@
 
 
   <li class="md-nav__item">
-    <a href="Syntax/Syntax.html" title="Syntax" class="md-nav__link">
-      Syntax
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
     <a href="Syntax/Operators.html" title="Operators" class="md-nav__link">
       Operators
     </a>
@@ -545,6 +545,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="Specification/Variables.html" title="Variables" class="md-nav__link">
+      Variables
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -619,7 +631,6 @@
                 
                 
                 <h1 id="welcome-to-bia">Welcome to Bia</h1>
-<p>For full documentation visit <a href="https://mkdocs.org">mkdocs.org</a>.</p>
 <h2 id="dependencies">Dependencies</h2>
 <p>No dependency is actually required, however, the <strong>bold</strong> printed dependecies are recommended and enabled by default.</p>
 <table>
@@ -628,43 +639,15 @@
 <th>Dependency</th>
 <th>Usage</th>
 <th>Configuration</th>
+<th>Default</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong><a href="http://site.icu-project.org/">ICU</a></strong></td>
-<td>String encoding conversion</td>
-<td>BIA_STRING_ENCODING_BACKEND=ICU</td>
-</tr>
-<tr>
-<td><strong><a href="http://mpir.org/">MPIR</a></strong></td>
-<td>Integrated big numbers</td>
-<td>BIA_BIG_INT_BACKEND=MPIR</td>
-</tr>
-<tr>
-<td><strong><a href="#">PCRE2</a></strong></td>
-<td></td>
-<td>BIA_REGEX_BACKEND=PCRE2</td>
-</tr>
-<tr>
-<td><a href="#">std::regex</a></td>
-<td></td>
-<td>BIA_REGEX_BACKEND=std::regex</td>
-</tr>
-<tr>
-<td><a href="#">boost::regex</a></td>
-<td></td>
-<td>BIA_REGEX_BACKEND=boost::regex</td>
-</tr>
-<tr>
-<td><strong><a href="#">std::thread</a></strong></td>
+<td>std::thread</td>
 <td></td>
 <td>BIA_THREAD_BACKEND=std::thread</td>
-</tr>
-<tr>
-<td><a href="#">boost::thread</a></td>
-<td></td>
-<td>BIA_THREAD_BACKEND=boost::thread</td>
+<td><em>default</em> and recommended</td>
 </tr>
 </tbody>
 </table>
@@ -673,9 +656,9 @@
 <h2 id="building-from-source">Building from Source</h2>
 <p>Prerequisites:</p>
 <ul>
-<li><a href="https://cmake.org/">CMake</a> at least Version 3.1</li>
-<li>C++ Compiler with at least C++11 support</li>
-<li>Git</li>
+<li>CMake <em>(version 3.1)</em></li>
+<li>C++ compiler with at least C++11 support</li>
+<li>git</li>
 </ul>
 <p>The source code can be retrieved from GitHub with ❤</p>
 <div class="codehilite"><pre><span></span><code>git clone https://github.com/bialang/bia.git
