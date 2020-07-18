@@ -11,7 +11,7 @@
       
       
       <link rel="shortcut icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.3.3">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.4.0">
     
     
       
@@ -306,6 +306,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Types/List.html" title="List" class="md-nav__link">
+      List
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -587,6 +599,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#forin" class="md-nav__link">
+    for...in
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -607,6 +626,18 @@
   <li class="md-nav__item">
     <a href="Scopes.html" title="Scopes" class="md-nav__link">
       Scopes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="Keywords.html" title="Keywords" class="md-nav__link">
+      Keywords
     </a>
   </li>
 
@@ -676,6 +707,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#forin" class="md-nav__link">
+    for...in
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -726,6 +764,16 @@
     <span class="n">x</span> <span class="o">=</span> <span class="n">y</span><span class="p">.</span><span class="n">something</span><span class="p">()</span>
 <span class="err">}</span>
 </code></pre></div>
+
+
+<h3 id="forin"><code>for...in</code></h3>
+<div class="codehilite"><pre><span></span><code><span class="err">for i in range(10) {</span>
+<span class="err">    io.print(i)</span>
+<span class="err">}</span>
+</code></pre></div>
+
+
+<p>In this case the variable <code>i</code> will be declared only for the loop and will not be available outside of the scope. If a variable already existed with the same name, it will be overshadowed.</p>
                 
               
               
@@ -793,14 +841,14 @@
     </div>
     
       <script src="../assets/javascripts/vendor.d710d30a.min.js"></script>
-      <script src="../assets/javascripts/bundle.4a5ba8d6.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      <script src="../assets/javascripts/bundle.b39636ac.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
       
       <script>
         app = initialize({
           base: "..",
           features: [],
           search: Object.assign({
-            worker: "../assets/javascripts/worker/search.9b3611bd.min.js"
+            worker: "../assets/javascripts/worker/search.a68abb33.min.js"
           }, typeof search !== "undefined" && search)
         })
       </script>

@@ -15,7 +15,7 @@
     
     
       
-        <title>Engine - Bia Language</title>
+        <title>List - Bia Language</title>
       
     
     
@@ -45,7 +45,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#engine" class="md-skip">
+        <a href="#list" class="md-skip">
           Skip to content
         </a>
       
@@ -73,7 +73,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Engine
+              List
             
           </span>
         </div>
@@ -249,10 +249,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
     
     <label class="md-nav__link" for="nav-3">
       Types
@@ -276,7 +278,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../Types/Numbers.html" title="Numbers" class="md-nav__link">
+    <a href="Numbers.html" title="Numbers" class="md-nav__link">
       Numbers
     </a>
   </li>
@@ -288,7 +290,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../Types/Strings.html" title="Strings" class="md-nav__link">
+    <a href="Strings.html" title="Strings" class="md-nav__link">
       Strings
     </a>
   </li>
@@ -300,7 +302,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../Types/Regex.html" title="Regex" class="md-nav__link">
+    <a href="Regex.html" title="Regex" class="md-nav__link">
       Regex
     </a>
   </li>
@@ -310,11 +312,60 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../Types/List.html" title="List" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        List
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="List.html" title="List" class="md-nav__link md-nav__link--active">
       List
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#builtin-list" class="md-nav__link">
+    builtin list
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#members" class="md-nav__link">
+    Members
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -423,12 +474,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6" checked>
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
     
     <label class="md-nav__link" for="nav-6">
       Engine
@@ -450,20 +499,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-    <a href="Engine.html" title="Engine" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../Engine/Engine.html" title="Engine" class="md-nav__link">
       Engine
     </a>
-    
   </li>
 
         
@@ -473,7 +513,7 @@
 
 
   <li class="md-nav__item">
-    <a href="Memory.html" title="Memory" class="md-nav__link">
+    <a href="../Engine/Memory.html" title="Memory" class="md-nav__link">
       Memory
     </a>
   </li>
@@ -485,7 +525,7 @@
 
 
   <li class="md-nav__item">
-    <a href="Op%20Codes.html" title="Op Codes" class="md-nav__link">
+    <a href="../Engine/Op%20Codes.html" title="Op Codes" class="md-nav__link">
       Op Codes
     </a>
   </li>
@@ -591,6 +631,30 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#builtin-list" class="md-nav__link">
+    builtin list
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#members" class="md-nav__link">
+    Members
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -601,7 +665,7 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/bialang/bia/edit/master/docs/Engine/Engine.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/bialang/bia/edit/master/docs/Types/List.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
@@ -609,7 +673,33 @@
                   
                 
                 
-                <h1 id="engine">Engine</h1>
+                <h1 id="list">List</h1>
+<h2 id="builtin-list">builtin <code>list</code></h2>
+<div class="codehilite"><pre><span></span><code><span class="n">let</span> <span class="n">empty</span> <span class="o">=</span> <span class="n">list</span><span class="p">()</span>
+<span class="n">let</span> <span class="n">my_list</span> <span class="o">=</span> <span class="n">list</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="ss">&quot;the second element&quot;</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">element</span> <span class="k">in</span> <span class="n">my_list</span> <span class="err">{</span>
+    <span class="n">io</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">element</span><span class="p">)</span>
+<span class="err">}</span>
+</code></pre></div>
+
+
+<h2 id="members">Members</h2>
+<ul>
+<li><code>push(elements...)</code> pushes all given elements to the list</li>
+<li><code>pop(n=1)</code> removes the last n elements</li>
+<li><code>clear()</code> empties the list</li>
+<li><code>size</code> the current size of the list</li>
+<li><code>capacity</code> the capacity of the; this value describes after what size a push triggers a resize</li>
+<li><code>empty</code> if the list is empty</li>
+<li><code>front</code> the first element of the list</li>
+<li><code>back</code> the last element of the list</li>
+<li><code>reserve(capacity)</code> reserves more space</li>
+<li><code>shrink_to_fit()</code> shrinks the list and releases unused memory</li>
+<li><code>insert(index, elements...)</code> inserts the elements at the given index</li>
+<li><code>erase(index, n=1)</code> erases from index n elements</li>
+<li><code>reverse()</code> reverses the list inplace</li>
+</ul>
                 
               
               
@@ -628,7 +718,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../Syntax/Operators.html" title="Operators" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="Regex.html" title="Regex" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -637,19 +727,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Operators
+                Regex
               </div>
             </div>
           </a>
         
         
-          <a href="Memory.html" title="Memory" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../Examples/Hello%20World.html" title="Hello World" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Memory
+                Hello World
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">

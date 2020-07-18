@@ -11,7 +11,7 @@
       
       
       <link rel="shortcut icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.3.3">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.4.0">
     
     
       
@@ -344,8 +344,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#modifiers1" class="md-nav__link">
-    Modifiers1
+  <a href="#examples" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modifiers" class="md-nav__link">
+    Modifiers
   </a>
   
 </li>
@@ -361,6 +368,18 @@
   
 </nav>
     
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="List.html" title="List" class="md-nav__link">
+      List
+    </a>
   </li>
 
         
@@ -592,6 +611,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Specification/Keywords.html" title="Keywords" class="md-nav__link">
+      Keywords
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -630,8 +661,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#modifiers1" class="md-nav__link">
-    Modifiers1
+  <a href="#examples" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modifiers" class="md-nav__link">
+    Modifiers
   </a>
   
 </li>
@@ -675,7 +713,26 @@
 <p class="admonition-title">Note</p>
 <p><code>//</code> is not a valid regex expression. See <a href="../Syntax/Comments.html">comments</a> for more information.</p>
 </div>
-<h2 id="modifiers1">Modifiers<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></h2>
+<h2 id="examples">Examples</h2>
+<div class="codehilite"><pre><span></span><code><span class="o">//</span> <span class="n">matches</span> <span class="k">any</span> <span class="n">digit</span>
+<span class="n">let</span> <span class="n">pattern</span> <span class="o">=</span> <span class="o">/</span><span class="err">\</span><span class="n">d</span><span class="o">+/</span>
+
+<span class="n">io</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">pattern</span> <span class="o">==</span> <span class="ss">&quot;65&quot;</span><span class="p">)</span> <span class="o">//</span> <span class="mi">1</span>
+<span class="n">io</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">pattern</span> <span class="k">in</span> <span class="ss">&quot;some string&quot;</span><span class="p">)</span> <span class="o">//</span> <span class="mi">0</span>
+<span class="n">io</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">pattern</span> <span class="k">in</span> <span class="ss">&quot;i am 21 years old&quot;</span><span class="p">)</span> <span class="o">//</span> <span class="mi">1</span>
+<span class="n">io</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">pattern</span><span class="p">.</span><span class="k">match</span><span class="p">(</span><span class="ss">&quot;i am 21 years old&quot;</span><span class="p">))</span> <span class="o">//</span> <span class="o">&lt;</span><span class="k">null</span><span class="o">&gt;</span>
+<span class="n">io</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">pattern</span><span class="p">.</span><span class="k">search</span><span class="p">(</span><span class="ss">&quot;i am 21 years old&quot;</span><span class="p">).</span><span class="k">group</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span> <span class="o">//</span> <span class="mi">21</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="k">in</span> <span class="n">pattern</span><span class="p">.</span><span class="n">match_all</span><span class="p">(</span><span class="ss">&quot;18.07.2020&quot;</span><span class="p">)</span> <span class="err">{</span>
+    <span class="n">io</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">i</span><span class="p">.</span><span class="k">group</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span>
+<span class="err">}</span>
+</code></pre></div>
+
+
+<h2 id="modifiers">Modifiers</h2>
+<div class="admonition warning">
+<p class="admonition-title">This has not been implemented yet</p>
+</div>
 <p>Modifiers come immediately after the enclosing <code>/</code> like:</p>
 <div class="codehilite"><pre><span></span><code><span class="err">let pattern = /a.+/si</span>
 </code></pre></div>
@@ -711,20 +768,10 @@
 <p>Depending on the underlying engine different RegEx features are supported. For more information check out the engine documentations.</p>
 <ul>
 <li><code>std::regex</code> <em>default</em></li>
-<li>PCRE2<sup id="fnref2:1"><a class="footnote-ref" href="#fn:1">1</a></sup></li>
+<li>PCRE2 <em>not supported</em></li>
 </ul>
 <div class="codehilite"><pre><span></span><code><span class="err">let engine_name = /./.name</span>
 </code></pre></div>
-
-
-<div class="footnote">
-<hr />
-<ol>
-<li id="fn:1">
-<p>This feature has not been implemented yet.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
-</li>
-</ol>
-</div>
                 
               
               
@@ -758,13 +805,13 @@
           </a>
         
         
-          <a href="../Examples/Hello%20World.html" title="Hello World" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="List.html" title="List" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Hello World
+                List
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">
@@ -792,14 +839,14 @@
     </div>
     
       <script src="../assets/javascripts/vendor.d710d30a.min.js"></script>
-      <script src="../assets/javascripts/bundle.4a5ba8d6.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      <script src="../assets/javascripts/bundle.b39636ac.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
       
       <script>
         app = initialize({
           base: "..",
           features: [],
           search: Object.assign({
-            worker: "../assets/javascripts/worker/search.9b3611bd.min.js"
+            worker: "../assets/javascripts/worker/search.a68abb33.min.js"
           }, typeof search !== "undefined" && search)
         })
       </script>
