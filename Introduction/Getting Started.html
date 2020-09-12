@@ -21,6 +21,12 @@
     
       <link rel="stylesheet" href="../assets/stylesheets/main.fe0cca5b.min.css">
       
+        <link rel="stylesheet" href="../assets/stylesheets/palette.a46bcfb3.min.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#546e7a">
       
     
     
@@ -36,8 +42,13 @@
   </head>
   
   
-    <body dir="ltr">
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="preference" data-md-color-primary="blue-grey" data-md-color-accent="blue-grey">
   
+    
+      <script>matchMedia("(prefers-color-scheme: dark)").matches&&document.body.setAttribute("data-md-color-scheme","slate")</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -220,9 +231,42 @@
       
     
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Getting Started
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
     <a href="Getting%20Started.html" title="Getting Started" class="md-nav__link md-nav__link--active">
       Getting Started
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#go" class="md-nav__link">
+    Go
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -591,6 +635,23 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#go" class="md-nav__link">
+    Go
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -611,14 +672,21 @@
                 
                 <h1 id="getting-started">Getting Started</h1>
 <p>After installing Bia it can be used in your CMake projects:</p>
-<div class="codehilite"><pre><span></span><code><span class="nb">find_package</span><span class="p">(</span><span class="s">bialang</span> <span class="s">REQUIRED</span><span class="p">)</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nb">find_package</span><span class="p">(</span><span class="s">bia</span> <span class="s">REQUIRED</span><span class="p">)</span>
 
 <span class="nb">add_executable</span><span class="p">(</span><span class="s">main</span> <span class="s2">&quot;main.cpp&quot;</span><span class="p">)</span>
-<span class="nb">target_link_libraries</span><span class="p">(</span><span class="s">main</span> <span class="s">PUBLIC</span> <span class="s">bialang::bialang</span><span class="p">)</span>
+<span class="nb">target_link_libraries</span><span class="p">(</span><span class="s">main</span> <span class="s">PUBLIC</span> <span class="s">bia::bia</span><span class="p">)</span>
 </code></pre></div>
+</td></tr></table>
 
-
-<p>For simple embedding including <code>&lt;bia/bia.hpp&gt;</code> and using <code>bia::engine</code> should be enough.</p>
+<p>For simple embedding in C++ including <code>&lt;bia/bia.hpp&gt;</code> and using <code>bia::engine</code> should be enough. For the C Port including <code>&lt;bia/cbia.h&gt;</code> and using <code>bia_engine_t</code> should be enough.</p>
+<h2 id="go">Go</h2>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>go get github.com/bialang/gobia
+</code></pre></div>
+</td></tr></table>
                 
               
               

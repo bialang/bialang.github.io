@@ -21,6 +21,12 @@
     
       <link rel="stylesheet" href="../assets/stylesheets/main.fe0cca5b.min.css">
       
+        <link rel="stylesheet" href="../assets/stylesheets/palette.a46bcfb3.min.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#546e7a">
       
     
     
@@ -36,8 +42,13 @@
   </head>
   
   
-    <body dir="ltr">
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="preference" data-md-color-primary="blue-grey" data-md-color-accent="blue-grey">
   
+    
+      <script>matchMedia("(prefers-color-scheme: dark)").matches&&document.body.setAttribute("data-md-color-scheme","slate")</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -612,18 +623,29 @@
                 <h1 id="comments">Comments</h1>
 <p>Bia's comment style is similar to C++'s comments. Single line comments start with <code>//</code> and multiline comments start with <code>/*</code> and end with <code>*/</code>.</p>
 <p>Example:</p>
-<div class="codehilite"><pre><span></span><code><span class="o">//</span> <span class="k">next</span> <span class="n">line</span> <span class="n">prints</span><span class="p">:</span> <span class="n">Hello</span><span class="p">,</span> <span class="n">World</span>
-<span class="n">io</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="ss">&quot;Hello, World&quot;</span><span class="p">)</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1">// next line prints: Hello, World</span>
+<span class="n">io</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s2">&quot;Hello, World&quot;</span><span class="p">)</span>
 
-<span class="cm">/*</span>
-<span class="cm">This is a multiline comment</span>
-<span class="cm">I</span>
-<span class="cm">can</span>
-<span class="cm">write</span>
-<span class="cm">anything</span>
-<span class="cm">here</span>
-<span class="cm">*/</span>
+<span class="cm">/*</span><span class="c"></span>
+<span class="c">This is a multiline comment</span>
+<span class="c">I</span>
+<span class="c">can</span>
+<span class="c">write</span>
+<span class="c">anything</span>
+<span class="c">here</span>
+<span class="c">*/</span>
 </code></pre></div>
+</td></tr></table>
                 
               
               

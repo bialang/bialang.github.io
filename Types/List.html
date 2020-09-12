@@ -21,6 +21,12 @@
     
       <link rel="stylesheet" href="../assets/stylesheets/main.fe0cca5b.min.css">
       
+        <link rel="stylesheet" href="../assets/stylesheets/palette.a46bcfb3.min.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#546e7a">
       
     
     
@@ -36,8 +42,13 @@
   </head>
   
   
-    <body dir="ltr">
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="preference" data-md-color-primary="blue-grey" data-md-color-accent="blue-grey">
   
+    
+      <script>matchMedia("(prefers-color-scheme: dark)").matches&&document.body.setAttribute("data-md-color-scheme","slate")</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -675,14 +686,19 @@
                 
                 <h1 id="list">List</h1>
 <h2 id="builtin-list">builtin <code>list</code></h2>
-<div class="codehilite"><pre><span></span><code><span class="n">let</span> <span class="n">empty</span> <span class="o">=</span> <span class="n">list</span><span class="p">()</span>
-<span class="n">let</span> <span class="n">my_list</span> <span class="o">=</span> <span class="n">list</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="ss">&quot;the second element&quot;</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">let</span><span class="err"> </span><span class="n">empty</span><span class="err"> = </span><span class="nb">list</span><span class="p">()</span>
+<span class="k">let</span><span class="err"> </span><span class="n">my_list</span><span class="err"> = </span><span class="nb">list</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="err"> </span><span class="s2">&quot;the second element&quot;</span><span class="p">,</span><span class="err"> </span><span class="mi">3</span><span class="p">)</span>
 
-<span class="k">for</span> <span class="n">element</span> <span class="k">in</span> <span class="n">my_list</span> <span class="err">{</span>
-    <span class="n">io</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">element</span><span class="p">)</span>
-<span class="err">}</span>
+<span class="k">for</span><span class="err"> </span><span class="n">element</span><span class="err"> </span><span class="ow">in</span><span class="err"> </span><span class="n">my_list</span><span class="err"> </span><span class="p">{</span>
+<span class="err">    </span><span class="n">io</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">element</span><span class="p">)</span>
+<span class="p">}</span>
 </code></pre></div>
-
+</td></tr></table>
 
 <h2 id="members">Members</h2>
 <ul>

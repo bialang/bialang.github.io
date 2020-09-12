@@ -21,6 +21,12 @@
     
       <link rel="stylesheet" href="../assets/stylesheets/main.fe0cca5b.min.css">
       
+        <link rel="stylesheet" href="../assets/stylesheets/palette.a46bcfb3.min.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#546e7a">
       
     
     
@@ -36,8 +42,13 @@
   </head>
   
   
-    <body dir="ltr">
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="preference" data-md-color-primary="blue-grey" data-md-color-accent="blue-grey">
   
+    
+      <script>matchMedia("(prefers-color-scheme: dark)").matches&&document.body.setAttribute("data-md-color-scheme","slate")</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -717,17 +728,19 @@
 <h2 id="special-behavior-of-the-logical-operators">Special Behavior of the Logical Operators</h2>
 <h3 id="logical-and">Logical And</h3>
 <p>If the left-hand side can be converted to <code>true</code>, the right-hand side is returned; otherwise the left-hand side is returned:</p>
-<div class="codehilite"><pre><span></span><code><span class="err">io.print(99 and 61) // 61</span>
-<span class="err">io.print(0 and 61) // 0</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">io</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="mi">99</span><span class="err"> </span><span class="ow">and</span><span class="err"> </span><span class="mi">61</span><span class="p">)</span><span class="err"> </span><span class="c1">// 61</span>
+<span class="n">io</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="mi">0</span><span class="err"> </span><span class="ow">and</span><span class="err"> </span><span class="mi">61</span><span class="p">)</span><span class="err"> </span><span class="c1">// 0</span>
 </code></pre></div>
-
+</td></tr></table>
 
 <h3 id="logical-or">Logical Or</h3>
 <p>If the left-hand side can be converted to <code>true</code>, it is returned; otherwise the right-hand side is returned:</p>
-<div class="codehilite"><pre><span></span><code><span class="err">io.print(99 or 61) // 99</span>
-<span class="err">io.print(0 or 61) // 61</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">io</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="mi">99</span><span class="err"> </span><span class="ow">or</span><span class="err"> </span><span class="mi">61</span><span class="p">)</span><span class="err"> </span><span class="c1">// 99</span>
+<span class="n">io</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="mi">0</span><span class="err"> </span><span class="ow">or</span><span class="err"> </span><span class="mi">61</span><span class="p">)</span><span class="err"> </span><span class="c1">// 61</span>
 </code></pre></div>
-
+</td></tr></table>
 
 <h2 id="precedence">Precedence</h2>
 <p>The following table shows Bia's operator precedence from highest to lowest.</p>

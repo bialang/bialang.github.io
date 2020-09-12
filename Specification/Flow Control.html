@@ -21,6 +21,12 @@
     
       <link rel="stylesheet" href="../assets/stylesheets/main.fe0cca5b.min.css">
       
+        <link rel="stylesheet" href="../assets/stylesheets/palette.a46bcfb3.min.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#546e7a">
       
     
     
@@ -36,8 +42,13 @@
   </head>
   
   
-    <body dir="ltr">
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="preference" data-md-color-primary="blue-grey" data-md-color-accent="blue-grey">
   
+    
+      <script>matchMedia("(prefers-color-scheme: dark)").matches&&document.body.setAttribute("data-md-color-scheme","slate")</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -742,36 +753,52 @@
                 <h1 id="flow-control">Flow Control</h1>
 <h2 id="conditionals">Conditionals</h2>
 <h3 id="if-else-if-and-else"><code>if</code>, <code>else if</code> and <code>else</code></h3>
-<div class="codehilite"><pre><span></span><code><span class="err">if x {</span>
-<span class="err">    io.print(&quot;x evaluates to true&quot;)</span>
-<span class="err">} else if not y {</span>
-<span class="err">    io.print(&quot;x and y evaluate to false&quot;)</span>
-<span class="err">} else {</span>
-<span class="err">    io.print(&quot;why am i here&quot;)</span>
-<span class="err">}</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">if</span><span class="err"> </span><span class="n">x</span><span class="err"> </span><span class="p">{</span>
+<span class="err">    </span><span class="n">io</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s2">&quot;x evaluates to true&quot;</span><span class="p">)</span>
+<span class="p">}</span><span class="err"> </span><span class="k">else</span><span class="err"> </span><span class="k">if</span><span class="err"> </span><span class="ow">not</span><span class="err"> </span><span class="n">y</span><span class="err"> </span><span class="p">{</span>
+<span class="err">    </span><span class="n">io</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s2">&quot;x and y evaluate to false&quot;</span><span class="p">)</span>
+<span class="p">}</span><span class="err"> </span><span class="k">else</span><span class="err"> </span><span class="p">{</span>
+<span class="err">    </span><span class="n">io</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s2">&quot;why am i here&quot;</span><span class="p">)</span>
+<span class="p">}</span>
 </code></pre></div>
-
+</td></tr></table>
 
 <h2 id="loops">Loops</h2>
 <h3 id="while"><code>while</code></h3>
-<div class="codehilite"><pre><span></span><code><span class="n">while</span> <span class="n">x</span> <span class="err">{</span>
-    <span class="n">io</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">while</span><span class="err"> </span><span class="n">x</span><span class="err"> </span><span class="p">{</span>
+<span class="err">    </span><span class="n">io</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 
-    <span class="k">if</span> <span class="k">not</span> <span class="n">y</span> <span class="err">{</span>
-        <span class="n">break</span>
-    <span class="err">}</span>
+<span class="err">    </span><span class="k">if</span><span class="err"> </span><span class="ow">not</span><span class="err"> </span><span class="n">y</span><span class="err"> </span><span class="p">{</span>
+<span class="err">        </span><span class="k">break</span>
+<span class="err">    </span><span class="p">}</span>
 
-    <span class="n">x</span> <span class="o">=</span> <span class="n">y</span><span class="p">.</span><span class="n">something</span><span class="p">()</span>
-<span class="err">}</span>
+<span class="err">    </span><span class="n">x</span><span class="err"> = </span><span class="n">y</span><span class="p">.</span><span class="n">something</span><span class="p">()</span>
+<span class="p">}</span>
 </code></pre></div>
-
+</td></tr></table>
 
 <h3 id="forin"><code>for...in</code></h3>
-<div class="codehilite"><pre><span></span><code><span class="err">for i in range(10) {</span>
-<span class="err">    io.print(i)</span>
-<span class="err">}</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">for</span><span class="err"> </span><span class="n">i</span><span class="err"> </span><span class="ow">in</span><span class="err"> </span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span><span class="err"> </span><span class="p">{</span>
+<span class="err">    </span><span class="n">io</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+<span class="p">}</span>
 </code></pre></div>
-
+</td></tr></table>
 
 <p>In this case the variable <code>i</code> will be declared only for the loop and will not be available outside of the scope. If a variable already existed with the same name, it will be overshadowed.</p>
                 

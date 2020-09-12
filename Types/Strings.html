@@ -21,6 +21,12 @@
     
       <link rel="stylesheet" href="../assets/stylesheets/main.fe0cca5b.min.css">
       
+        <link rel="stylesheet" href="../assets/stylesheets/palette.a46bcfb3.min.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#546e7a">
       
     
     
@@ -36,8 +42,13 @@
   </head>
   
   
-    <body dir="ltr">
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="preference" data-md-color-primary="blue-grey" data-md-color-accent="blue-grey">
   
+    
+      <script>matchMedia("(prefers-color-scheme: dark)").matches&&document.body.setAttribute("data-md-color-scheme","slate")</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -732,13 +743,17 @@
                 <h1 id="string">String</h1>
 <h2 id="comparing-strings">Comparing Strings</h2>
 <p>Strings can be compared with the <code>==</code> or <code>!=</code> operators or with <code>equals</code> or <code>iequals</code> for case-insensitive comparing. Additionally <code>compare</code> or <code>icompare</code> return an integer value describing the comparison.</p>
-<div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">io</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">import</span><span class="err"> </span><span class="n">io</span>
 
-<span class="n">io</span><span class="o">.</span><span class="k">print</span><span class="p">(</span><span class="s2">&quot;bia&quot;</span> <span class="o">==</span> <span class="s2">&quot;Bia&quot;</span><span class="p">)</span> <span class="o">//</span> <span class="mi">0</span>
-<span class="n">io</span><span class="o">.</span><span class="k">print</span><span class="p">(</span><span class="s2">&quot;bia&quot;</span> <span class="o">!=</span> <span class="s2">&quot;Bia&quot;</span><span class="p">)</span> <span class="o">//</span> <span class="mi">1</span>
-<span class="n">io</span><span class="o">.</span><span class="k">print</span><span class="p">(</span><span class="s2">&quot;Bia&quot;</span> <span class="ow">in</span> <span class="s2">&quot;I like Bia&quot;</span><span class="p">)</span> <span class="o">//</span> <span class="mi">1</span>
+<span class="n">io</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s2">&quot;bia&quot;</span><span class="err"> == </span><span class="s2">&quot;Bia&quot;</span><span class="p">)</span><span class="err"> </span><span class="c1">// 0</span>
+<span class="n">io</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s2">&quot;bia&quot;</span><span class="err"> != </span><span class="s2">&quot;Bia&quot;</span><span class="p">)</span><span class="err"> </span><span class="c1">// 1</span>
+<span class="n">io</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s2">&quot;Bia&quot;</span><span class="err"> </span><span class="ow">in</span><span class="err"> </span><span class="s2">&quot;I like Bia&quot;</span><span class="p">)</span><span class="err"> </span><span class="c1">// 1</span>
 </code></pre></div>
-
+</td></tr></table>
 
 <h2 id="members">Members</h2>
 <ul>
@@ -751,12 +766,15 @@
 <p class="admonition-title">This section is out of date</p>
 </div>
 <p>When accessing characters at a specific position keep in mind that the code unit is returned and not the actual code point. When the string consists of only BMP characters all code units are also code points (see UTF-16 encoding).</p>
-<div class="codehilite"><pre><span></span><code><span class="n">let</span> <span class="n">string</span> <span class="o">=</span> <span class="ss">&quot;aが&quot;</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">let</span><span class="err"> </span><span class="n">string</span><span class="err"> = </span><span class="s2">&quot;aが&quot;</span>
 
-<span class="o">//</span> <span class="n">prints</span> <span class="mi">3</span>
-<span class="n">print</span><span class="p">(</span><span class="n">string</span><span class="p">.</span><span class="k">length</span><span class="p">)</span>
+<span class="c1">// prints 3</span>
+<span class="n">print</span><span class="p">(</span><span class="n">string</span><span class="p">.</span><span class="n">length</span><span class="p">)</span>
 </code></pre></div>
-
+</td></tr></table>
 
 <h2 id="escape-characters">Escape Characters</h2>
 <table>

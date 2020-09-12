@@ -21,6 +21,12 @@
     
       <link rel="stylesheet" href="../assets/stylesheets/main.fe0cca5b.min.css">
       
+        <link rel="stylesheet" href="../assets/stylesheets/palette.a46bcfb3.min.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#546e7a">
       
     
     
@@ -36,8 +42,13 @@
   </head>
   
   
-    <body dir="ltr">
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="preference" data-md-color-primary="blue-grey" data-md-color-accent="blue-grey">
   
+    
+      <script>matchMedia("(prefers-color-scheme: dark)").matches&&document.body.setAttribute("data-md-color-scheme","slate")</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -784,62 +795,119 @@
                 <h1 id="cheatsheet">Cheatsheet</h1>
 <h2 id="the-engine">The Engine</h2>
 <p>A Bia engine can be initialized like this:</p>
-<div class="codehilite"><pre><span></span><code><span class="cp">#include</span> <span class="cpf">&lt;bia/bia.hpp&gt;</span><span class="cp"></span>
+<div class="tabbed-set" data-tabs="1:3">
+<input name="__tabbed_1" type="radio" id="__tabbed_1_1" checked="checked" /><label for="__tabbed_1_1">C++</label><div class="tabbed-content"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="cp">#include</span> <span class="cpf">&lt;bia/bia.hpp&gt;</span><span class="cp"></span>
 
 <span class="n">bia</span><span class="o">::</span><span class="n">engine</span> <span class="n">engine</span><span class="p">;</span>
 </code></pre></div>
+</td></tr></table></div>
+<input name="__tabbed_1" type="radio" id="__tabbed_1_2" /><label for="__tabbed_1_2">C</label><div class="tabbed-content"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="cp">#include</span> <span class="cpf">&lt;bia/cbia.h&gt;</span><span class="cp"></span>
 
+<span class="n">bia_engine_t</span> <span class="n">engine</span> <span class="o">=</span> <span class="n">bia_engine_new</span><span class="p">();</span>
 
+<span class="c1">// always free afterwards</span>
+<span class="n">bia_engine_free</span><span class="p">(</span><span class="n">engine</span><span class="p">);</span>
+</code></pre></div>
+</td></tr></table></div>
+<input name="__tabbed_1" type="radio" id="__tabbed_1_3" /><label for="__tabbed_1_3">Go</label><div class="tabbed-content"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="s">&quot;github.com/bialang/gobia&quot;</span>
+
+<span class="nx">engine</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">gobia</span><span class="p">.</span><span class="nx">NewEngine</span><span class="p">()</span>
+
+<span class="k">if</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+    <span class="nb">panic</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="k">defer</span> <span class="nx">engine</span><span class="p">.</span><span class="nx">Close</span><span class="p">()</span>
+</code></pre></div>
+</td></tr></table></div>
+</div>
 <h2 id="executing-a-script">Executing a Script</h2>
 <p>The <code>bia::engine::execute</code> function takes a <code>std::istream</code> for the script:</p>
-<div class="codehilite"><pre><span></span><code><span class="cp">#include</span> <span class="cpf">&lt;fstream&gt;</span><span class="cp"></span>
+<div class="tabbed-set" data-tabs="2:1">
+<input name="__tabbed_2" type="radio" id="__tabbed_2_1" checked="checked" /><label for="__tabbed_2_1">C++</label><div class="tabbed-content"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="cp">#include</span> <span class="cpf">&lt;fstream&gt;</span><span class="cp"></span>
 
 <span class="n">std</span><span class="o">::</span><span class="n">ifstream</span> <span class="n">file</span><span class="p">{</span> <span class="s">&quot;myscript.bia&quot;</span> <span class="p">};</span>
-
 <span class="n">engine</span><span class="p">.</span><span class="n">execute</span><span class="p">(</span><span class="n">file</span><span class="p">);</span>
 </code></pre></div>
-
-
+</td></tr></table></div>
+</div>
 <h2 id="language-reference">Language Reference</h2>
 <h3 id="variables">Variables</h3>
-<div class="codehilite"><pre><span></span><code><span class="n">let</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
-
-<span class="n">let</span> <span class="n">x</span> <span class="o">=</span> <span class="k">null</span> <span class="o">//</span> <span class="n">x</span> <span class="k">is</span> <span class="n">deleted</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">let</span><span class="err"> </span><span class="n">x</span><span class="err"> = </span><span class="mi">0</span>
+<span class="k">let</span><span class="err"> </span><span class="n">x</span><span class="err"> = </span><span class="n">null</span><span class="err"> </span><span class="c1">// x is deleted</span>
 </code></pre></div>
-
+</td></tr></table>
 
 <h3 id="looping">Looping</h3>
 <h4 id="condition-based">Condition Based</h4>
-<div class="codehilite"><pre><span></span><code><span class="n">while</span> <span class="k">true</span> <span class="err">{</span>
-    <span class="n">let</span> <span class="n">line</span> <span class="o">=</span> <span class="n">io</span><span class="p">.</span><span class="k">read</span><span class="p">(</span><span class="ss">&quot;&gt; &quot;</span><span class="p">)</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">while</span><span class="err"> </span><span class="kc">true</span><span class="err"> </span><span class="p">{</span>
+<span class="err">    </span><span class="k">let</span><span class="err"> </span><span class="n">line</span><span class="err"> = </span><span class="n">io</span><span class="p">.</span><span class="n">read</span><span class="p">(</span><span class="s2">&quot;&gt; &quot;</span><span class="p">)</span>
 
-    <span class="k">if</span> <span class="k">not</span> <span class="n">line</span> <span class="err">{</span>
-        <span class="n">break</span>
-    <span class="err">}</span>
+<span class="err">    </span><span class="k">if</span><span class="err"> </span><span class="ow">not</span><span class="err"> </span><span class="n">line</span><span class="err"> </span><span class="p">{</span>
+<span class="err">        </span><span class="k">break</span>
+<span class="err">    </span><span class="p">}</span>
 
-    <span class="n">io</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="ss">&quot;&lt; You said:&quot;</span><span class="p">,</span> <span class="n">line</span><span class="p">)</span>
-<span class="err">}</span>
+<span class="err">    </span><span class="n">io</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s2">&quot;&lt; You said:&quot;</span><span class="p">,</span><span class="err"> </span><span class="n">line</span><span class="p">)</span>
+<span class="p">}</span>
 </code></pre></div>
-
+</td></tr></table>
 
 <h4 id="range-loops">Range Loops</h4>
-<div class="codehilite"><pre><span></span><code><span class="k">for</span> <span class="n">i</span> <span class="k">in</span> <span class="n">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="err">{</span>
-    <span class="n">io</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-<span class="err">}</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">for</span><span class="err"> </span><span class="n">i</span><span class="err"> </span><span class="ow">in</span><span class="err"> </span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span><span class="err"> </span><span class="p">{</span>
+<span class="err">    </span><span class="n">io</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+<span class="p">}</span>
 
-<span class="k">for</span> <span class="n">m</span> <span class="k">in</span> <span class="o">/</span><span class="err">\</span><span class="n">d</span><span class="o">+/</span><span class="p">.</span><span class="n">match_all</span><span class="p">(</span><span class="ss">&quot;18.07.2020&quot;</span><span class="p">)</span> <span class="err">{</span>
-    <span class="n">io</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">m</span><span class="p">.</span><span class="k">group</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span>
-<span class="err">}</span>
+<span class="k">for</span><span class="err"> </span><span class="n">m</span><span class="err"> </span><span class="ow">in</span><span class="err"> </span><span class="sr">r&quot;\d+&quot;</span><span class="p">.</span><span class="n">match_all</span><span class="p">(</span><span class="s2">&quot;18.07.2020&quot;</span><span class="p">)</span><span class="err"> </span><span class="p">{</span>
+<span class="err">    </span><span class="n">io</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">m</span><span class="p">.</span><span class="n">group</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span>
+<span class="p">}</span>
 </code></pre></div>
-
+</td></tr></table>
 
 <h3 id="conditionals">Conditionals</h3>
-<div class="codehilite"><pre><span></span><code><span class="err">if x and not y {</span>
-<span class="err">    io.print(x)</span>
-<span class="err">} else if y {</span>
-<span class="err">    io.print(y)</span>
-<span class="err">}</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">if</span><span class="err"> </span><span class="n">x</span><span class="err"> </span><span class="ow">and</span><span class="err"> </span><span class="ow">not</span><span class="err"> </span><span class="n">y</span><span class="err"> </span><span class="p">{</span>
+<span class="err">    </span><span class="n">io</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="p">}</span><span class="err"> </span><span class="k">else</span><span class="err"> </span><span class="k">if</span><span class="err"> </span><span class="n">y</span><span class="err"> </span><span class="p">{</span>
+<span class="err">    </span><span class="n">io</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+<span class="p">}</span>
 </code></pre></div>
+</td></tr></table>
                 
               
               

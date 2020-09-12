@@ -21,6 +21,12 @@
     
       <link rel="stylesheet" href="assets/stylesheets/main.fe0cca5b.min.css">
       
+        <link rel="stylesheet" href="assets/stylesheets/palette.a46bcfb3.min.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#546e7a">
       
     
     
@@ -36,8 +42,13 @@
   </head>
   
   
-    <body dir="ltr">
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="preference" data-md-color-primary="blue-grey" data-md-color-accent="blue-grey">
   
+    
+      <script>matchMedia("(prefers-color-scheme: dark)").matches&&document.body.setAttribute("data-md-color-scheme","slate")</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -728,26 +739,30 @@
 <li>git</li>
 </ul>
 <p>The source code can be retrieved from <a href="https://github.com/bialang/bia">GitHub</a> with ❤</p>
-<div class="codehilite"><pre><span></span><code>git clone https://github.com/bialang/bia.git
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>git clone https://github.com/bialang/bia.git
 mkdir bia/build
 <span class="nb">cd</span> bia/build
 </code></pre></div>
-
+</td></tr></table>
 
 <p>With CMake and the source code, the library can be build as follows:</p>
-<div class="codehilite"><pre><span></span><code>cmake .. -DCMAKE_BUILD_TYPE<span class="o">=</span>Release
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>cmake ..
 cmake --build .
 </code></pre></div>
-
+</td></tr></table>
 
 <p>We recommend running the test before installing the library:</p>
-<div class="codehilite"><pre><span></span><code>ctest
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>ctest
 </code></pre></div>
-
+</td></tr></table>
 
 <p>If every test passed, everthing is good to go and the following command can be run (elevated privileges may be required). However, if any test failed, please open an issue on GitHub.</p>
-<div class="codehilite"><pre><span></span><code>cmake --build . --target install
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>cmake --build . --target install
 </code></pre></div>
+</td></tr></table>
                 
               
               

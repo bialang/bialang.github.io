@@ -21,6 +21,12 @@
     
       <link rel="stylesheet" href="../assets/stylesheets/main.fe0cca5b.min.css">
       
+        <link rel="stylesheet" href="../assets/stylesheets/palette.a46bcfb3.min.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#546e7a">
       
     
     
@@ -36,8 +42,13 @@
   </head>
   
   
-    <body dir="ltr">
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="preference" data-md-color-primary="blue-grey" data-md-color-accent="blue-grey">
   
+    
+      <script>matchMedia("(prefers-color-scheme: dark)").matches&&document.body.setAttribute("data-md-color-scheme","slate")</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -703,40 +714,46 @@
                 
                 <h1 id="native-regular-expressions">Native Regular Expressions</h1>
 <h2 id="syntax">Syntax</h2>
-<p>The pattern must be wrapped between <code>/</code> like following:</p>
-<div class="codehilite"><pre><span></span><code><span class="err">let pattern = /ab+/</span>
+<p>The pattern must be wrapped between <code>r"</code> and <code>"</code> like following:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">let</span><span class="err"> </span><span class="n">pattern</span><span class="err"> = </span><span class="sr">r&quot;ab+&quot;</span>
 </code></pre></div>
+</td></tr></table>
 
-
-<p>A <code>/</code> can be escaped with a <code>\</code>. The <code>\</code> only acts as a escape character in that perticular case.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p><code>//</code> is not a valid regex expression. See <a href="../Syntax/Comments.html">comments</a> for more information.</p>
-</div>
 <h2 id="examples">Examples</h2>
-<div class="codehilite"><pre><span></span><code><span class="o">//</span> <span class="n">matches</span> <span class="k">any</span> <span class="n">digit</span>
-<span class="n">let</span> <span class="n">pattern</span> <span class="o">=</span> <span class="o">/</span><span class="err">\</span><span class="n">d</span><span class="o">+/</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1">// matches any digit</span>
+<span class="k">let</span><span class="err"> </span><span class="n">pattern</span><span class="err"> = </span><span class="sr">r&quot;\d+&quot;</span>
 
-<span class="n">io</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">pattern</span> <span class="o">==</span> <span class="ss">&quot;65&quot;</span><span class="p">)</span> <span class="o">//</span> <span class="mi">1</span>
-<span class="n">io</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">pattern</span> <span class="k">in</span> <span class="ss">&quot;some string&quot;</span><span class="p">)</span> <span class="o">//</span> <span class="mi">0</span>
-<span class="n">io</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">pattern</span> <span class="k">in</span> <span class="ss">&quot;i am 21 years old&quot;</span><span class="p">)</span> <span class="o">//</span> <span class="mi">1</span>
-<span class="n">io</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">pattern</span><span class="p">.</span><span class="k">match</span><span class="p">(</span><span class="ss">&quot;i am 21 years old&quot;</span><span class="p">))</span> <span class="o">//</span> <span class="o">&lt;</span><span class="k">null</span><span class="o">&gt;</span>
-<span class="n">io</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">pattern</span><span class="p">.</span><span class="k">search</span><span class="p">(</span><span class="ss">&quot;i am 21 years old&quot;</span><span class="p">).</span><span class="k">group</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span> <span class="o">//</span> <span class="mi">21</span>
+<span class="n">io</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">pattern</span><span class="err"> == </span><span class="s2">&quot;65&quot;</span><span class="p">)</span><span class="err"> </span><span class="c1">// 1</span>
+<span class="n">io</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">pattern</span><span class="err"> </span><span class="ow">in</span><span class="err"> </span><span class="s2">&quot;some string&quot;</span><span class="p">)</span><span class="err"> </span><span class="c1">// 0</span>
+<span class="n">io</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">pattern</span><span class="err"> </span><span class="ow">in</span><span class="err"> </span><span class="s2">&quot;i am 21 years old&quot;</span><span class="p">)</span><span class="err"> </span><span class="c1">// 1</span>
+<span class="n">io</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">pattern</span><span class="p">.</span><span class="n">match</span><span class="p">(</span><span class="s2">&quot;i am 21 years old&quot;</span><span class="p">))</span><span class="err"> </span><span class="c1">// &lt;null&gt;</span>
+<span class="n">io</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">pattern</span><span class="p">.</span><span class="n">search</span><span class="p">(</span><span class="s2">&quot;i am 21 years old&quot;</span><span class="p">).</span><span class="n">group</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span><span class="err"> </span><span class="c1">// 21</span>
 
-<span class="k">for</span> <span class="n">i</span> <span class="k">in</span> <span class="n">pattern</span><span class="p">.</span><span class="n">match_all</span><span class="p">(</span><span class="ss">&quot;18.07.2020&quot;</span><span class="p">)</span> <span class="err">{</span>
-    <span class="n">io</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">i</span><span class="p">.</span><span class="k">group</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span>
-<span class="err">}</span>
+<span class="k">for</span><span class="err"> </span><span class="n">i</span><span class="err"> </span><span class="ow">in</span><span class="err"> </span><span class="n">pattern</span><span class="p">.</span><span class="n">match_all</span><span class="p">(</span><span class="s2">&quot;18.07.2020&quot;</span><span class="p">)</span><span class="err"> </span><span class="p">{</span>
+<span class="err">    </span><span class="n">io</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">i</span><span class="p">.</span><span class="n">group</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span>
+<span class="p">}</span>
 </code></pre></div>
-
+</td></tr></table>
 
 <h2 id="modifiers">Modifiers</h2>
 <div class="admonition warning">
 <p class="admonition-title">This has not been implemented yet</p>
 </div>
-<p>Modifiers come immediately after the enclosing <code>/</code> like:</p>
-<div class="codehilite"><pre><span></span><code><span class="err">let pattern = /a.+/si</span>
+<p>Modifiers come immediately after the regex without any spaces:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">let</span><span class="err"> </span><span class="n">pattern</span><span class="err"> = </span><span class="sr">r&quot;a.+&quot;</span><span class="n">si</span>
 </code></pre></div>
-
+</td></tr></table>
 
 <table>
 <thead>
@@ -770,8 +787,9 @@
 <li><code>std::regex</code> <em>default</em></li>
 <li>PCRE2 <em>not supported</em></li>
 </ul>
-<div class="codehilite"><pre><span></span><code><span class="err">let engine_name = /./.name</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">let</span><span class="err"> </span><span class="n">engine_name</span><span class="err"> = </span><span class="sr">r&quot;&quot;</span><span class="p">.</span><span class="n">name</span>
 </code></pre></div>
+</td></tr></table>
                 
               
               
