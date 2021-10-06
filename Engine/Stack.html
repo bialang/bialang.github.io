@@ -14,7 +14,7 @@
     
     
       
-        <title>Getting Started - Bia Language</title>
+        <title>Stack - Bia Language</title>
       
     
     
@@ -60,7 +60,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#getting-started" class="md-skip">
+        <a href="#stack" class="md-skip">
           Skip to content
         </a>
       
@@ -92,7 +92,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Getting Started
+              Stack
             
           </span>
         </div>
@@ -218,14 +218,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
       
       
       
@@ -246,51 +244,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Getting Started
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="Getting%20Started.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../Introduction/Getting%20Started.html" class="md-nav__link">
         Getting Started
       </a>
-      
-        
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#go" class="md-nav__link">
-    Go
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -302,7 +260,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Embedding.html" class="md-nav__link">
+      <a href="../Introduction/Embedding.html" class="md-nav__link">
         Embedding
       </a>
     </li>
@@ -316,7 +274,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Cheatsheet.html" class="md-nav__link">
+      <a href="../Introduction/Cheatsheet.html" class="md-nav__link">
         Cheatsheet
       </a>
     </li>
@@ -536,12 +494,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
       
       
       
@@ -564,7 +524,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Engine/Engine.html" class="md-nav__link">
+      <a href="Engine.html" class="md-nav__link">
         Engine
       </a>
     </li>
@@ -578,7 +538,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Engine/Memory.html" class="md-nav__link">
+      <a href="Memory.html" class="md-nav__link">
         Memory
       </a>
     </li>
@@ -590,11 +550,51 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../Engine/Stack.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Stack
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="Stack.html" class="md-nav__link md-nav__link--active">
         Stack
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#stack-frame" class="md-nav__link">
+    Stack Frame
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -606,7 +606,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Engine/Op%20Codes.html" class="md-nav__link">
+      <a href="Op%20Codes.html" class="md-nav__link">
         Op Codes
       </a>
     </li>
@@ -736,8 +736,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#go" class="md-nav__link">
-    Go
+  <a href="#stack-frame" class="md-nav__link">
+    Stack Frame
   </a>
   
 </li>
@@ -754,35 +754,14 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/bialang/bia/edit/master/docs/Introduction/Getting Started.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/bialang/bia/edit/master/docs/Engine/Stack.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                <h1 id="getting-started">Getting Started</h1>
-<p>After installing Bia it can be used in your CMake projects:</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nb">find_package</span><span class="p">(</span><span class="s">bia</span> <span class="s">REQUIRED</span><span class="p">)</span>
-
-<span class="nb">add_executable</span><span class="p">(</span><span class="s">main</span> <span class="s2">&quot;main.cpp&quot;</span><span class="p">)</span>
-<span class="nb">target_link_libraries</span><span class="p">(</span><span class="s">main</span> <span class="s">PUBLIC</span> <span class="s">bia::bia</span><span class="p">)</span>
-</code></pre></div>
-</td></tr></table>
-<p>For simple embedding in C++ including <code>&lt;bia/bia.hpp&gt;</code> and using <code>bia::engine</code> should be enough. For the C Port including <code>&lt;bia/cbia.h&gt;</code> and using <code>bia_engine_t</code> should be enough.</p>
-<h2 id="go">Go</h2>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>This package has not been updated. Do not use it yet.</p>
-</div>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>go get github.com/bialang/gobia
-</code></pre></div>
-</td></tr></table>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>You will need to have Bia installed on your machine in order to be able to use this interface.</p>
-</div>
+                <h1 id="stack">Stack</h1>
+<p>The stack of the virtual machine grows upwards.</p>
+<h2 id="stack-frame">Stack Frame</h2>
                 
               
               
@@ -802,7 +781,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../index.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Home" rel="prev">
+        <a href="Memory.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Memory" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -811,20 +790,20 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Home
+              Memory
             </div>
           </div>
         </a>
       
       
         
-        <a href="Embedding.html" class="md-footer__link md-footer__link--next" aria-label="Next: Embedding" rel="next">
+        <a href="Op%20Codes.html" class="md-footer__link md-footer__link--next" aria-label="Next: Op Codes" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Embedding
+              Op Codes
             </div>
           </div>
           <div class="md-footer__button md-icon">
